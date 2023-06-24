@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public float damping = 1.5f;
-    public Vector2 offset = new Vector2(2f, 1f);
+    public Vector2 offset = new Vector2(3f, 2f);
     public bool faceLeft;
     private Transform player;
     private int lastX;
