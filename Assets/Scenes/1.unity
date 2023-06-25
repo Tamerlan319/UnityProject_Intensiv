@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0813493525c5a14895eb7a3410d3f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damping: 1
+  damping: 10
   offset: {x: 0, y: 0}
   faceLeft: 0
 --- !u!1 &724259283
