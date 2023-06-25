@@ -2,15 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float speed;
     public Joystick joystick;
-
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 moveVelocity;
+    public static float health = 100;
 
+    public float Health
+    {
+        get { return health; }
+        set { health = value; }
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

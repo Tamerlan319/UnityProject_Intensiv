@@ -6,23 +6,30 @@ using UnityEngine.TextCore.Text;
 public class Enemy : MonoBehaviour
 {
     public GameObject[] point = new GameObject[14];
-    private int action, rand = 0;
+    private static int action, rand = 0;
     public float speed = 1f;
     private Vector3 eulerAngles;
     private object quaternion;
     public float angryDist = 20;
     private Transform player;
-    
-        
+    public Animator anim;
+    public float health = 100;
+    public int damage = 10;
+
+
+
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        anim = GetComponent<Animator>();
     }
     void Update()
     {
         if (action == 0)
         {
+            anim.SetBool("Move", true);
+            anim.SetBool("Attack", false);
             if (Vector3.Distance(transform.position, player.transform.position) < angryDist)
             {
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
@@ -61,12 +68,39 @@ public class Enemy : MonoBehaviour
 
                 }
             }
+            if (Vector3.Distance(transform.position, player.transform.position) < 2f)
+            {
+                action = 1;
+            }
+
             //if (Vector3.Distance(transform.position, player.transform.position) < angryDist)
             //{
             //    transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);   // Дальность Агра
             //}
 
 
+        }
+        if (action == 1)
+        {
+            Vector3 direction = player.transform.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            eulerAngles = transform.eulerAngles;
+            eulerAngles.z = angle;
+            transform.eulerAngles = eulerAngles;
+            anim.SetBool("Move", false);
+            anim.SetBool("Attack", true);
+            speed = 0;
+            Player.health -= damage;
+            
+
+            if (Vector3.Distance(transform.position, player.transform.position) > 2f)
+            {
+                action = 0;
+            }
+        }
+        if (health == 0)
+        {
+            
         }
     }
 
