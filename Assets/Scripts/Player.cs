@@ -31,6 +31,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + moveVelocity * Time.smoothDeltaTime);
+        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
 }
