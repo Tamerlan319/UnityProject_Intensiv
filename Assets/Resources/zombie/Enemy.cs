@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
                 eulerAngles = transform.eulerAngles;
                 eulerAngles.z = angle;
                 transform.eulerAngles = eulerAngles;
-                angryDist = 30;
+                angryDist = 15;
                 speed = 1f * 3;
             }
             else
@@ -52,7 +52,8 @@ public class Enemy : MonoBehaviour
                     eulerAngles = transform.eulerAngles;
                     eulerAngles.z = angle;
                     transform.eulerAngles = eulerAngles;
-
+                    angryDist = 7;
+                    speed = 1f;
                 }
                 else
                 {
