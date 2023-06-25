@@ -1,5 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 58098a9b83f72b248a9f7098475c378f
+=======
+<<<<<<<< HEAD:Assets/Prefab.meta
+guid: f47d7d2b6c47aa14990e81e104b644fa
+folderAsset: yes
+========
+guid: 58098a9b83f72b248a9f7098475c378f
+>>>>>>>> e5d792dc8140e9548dded14d3b861d55e25e9a2f:Assets/Scenes/2.unity.meta
+>>>>>>> Stashed changes
 DefaultImporter:
   externalObjects: {}
   userData: 
