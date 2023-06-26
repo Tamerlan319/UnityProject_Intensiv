@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -17,9 +18,11 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         curhlt -= damage;
-        if (curhlt < 0)
+        if (curhlt <= 0)
         {
-            speed = 0;
+            if (curhlt == -20) curhlt += 20;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            curhlt = 100;
         }
         health = curhlt;
     }
