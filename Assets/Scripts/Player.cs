@@ -28,7 +28,8 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-        curhlt = health;
+        //curhlt = health;
+        health = curhlt;
         rb = GetComponent<Rigidbody2D>();
     }
 
