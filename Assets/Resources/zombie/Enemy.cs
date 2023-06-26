@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     public float angryDist = 20;
     private Transform player;
     public Animator anim;
-    public int health = 100;
+    public static int health = 100;
     public int damage = 40;
     public Transform attackPoint;
     public float attackRange = 0.5f;
@@ -22,9 +22,24 @@ public class Enemy : MonoBehaviour
     public float timeBtwAttack;
     public float startTimeBtwAttack;
     public string PointAt;
+    public int curhlt;
+
+    public void TakeDamage(int damage)
+    {
+        curhlt -= damage;
+        if (curhlt < 0)
+        {
+            //speed = 0;
+            Destroy(gameObject);
+        }
+        health = curhlt;
+    }
 
     public void Attack()
     {
+        {
+            
+        }
         if (timeBtwAttack <= 0)
         {
             Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -50,6 +65,7 @@ public class Enemy : MonoBehaviour
     }
     private void Start()
     {
+        curhlt = health;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         attackPoint = GameObject.FindGameObjectWithTag(PointAt).transform;
         anim = GetComponent<Animator>();
