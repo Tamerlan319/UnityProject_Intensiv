@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class Player : MonoBehaviour
 {
@@ -9,15 +10,22 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 moveVelocity;
-    public static float health = 100;
+    public static int health = 100;
+    public int curhlt;
 
-    public float Health
+
+    public void TakeDamage(int damage)
     {
-        get { return health; }
-        set { health = value; }
+        curhlt -= damage;
+        if (curhlt < 0)
+        {
+            speed = 0;
+        }
+        health = curhlt;
     }
     void Start()
     {
+        curhlt = health;
         rb = GetComponent<Rigidbody2D>();
     }
 
