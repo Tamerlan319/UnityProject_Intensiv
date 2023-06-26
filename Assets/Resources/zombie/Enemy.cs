@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.TextCore.Text;
 
 public class Enemy : MonoBehaviour
@@ -13,16 +14,45 @@ public class Enemy : MonoBehaviour
     public float angryDist = 20;
     private Transform player;
     public Animator anim;
-    public float health = 100;
-    public int damage = 10;
+    public int health = 100;
+    public int damage = 40;
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+    public float timeBtwAttack;
+    public float startTimeBtwAttack;
 
+    public void Attack()
+    {
+        if (timeBtwAttack <= 0)
+        {
+            Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
+            //Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-
+            //foreach (Collider2D player in hitPlayers)
+            //{
+                player.GetComponent<Player>().TakeDamage(damage);
+            //}
+            speed = 0;
+            timeBtwAttack = startTimeBtwAttack;
+        }
+        else timeBtwAttack -= Time.deltaTime;
+    }
+    private void OnDrawGizmosSelected()
+    {
+        if(attackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        attackPoint = GameObject.FindGameObjectWithTag("Point").transform;
         anim = GetComponent<Animator>();
+        
     }
     void Update()
     {
@@ -89,9 +119,9 @@ public class Enemy : MonoBehaviour
             transform.eulerAngles = eulerAngles;
             anim.SetBool("Move", false);
             anim.SetBool("Attack", true);
-            speed = 0;
-            Player.health -= damage;
             
+
+            Attack();
 
             if (Vector3.Distance(transform.position, player.transform.position) > 2f)
             {
@@ -111,11 +141,5 @@ public class Enemy : MonoBehaviour
         //{
         //    transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);   // Дальность Агра
         //}
-    }
-    private void OnDrawGizmosSelected() // Показывает область 
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, angryDist);
-
     }
 }
