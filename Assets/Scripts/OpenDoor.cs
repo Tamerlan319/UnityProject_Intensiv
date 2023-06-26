@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Net;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,24 +8,47 @@ using UnityEngine.UI;
 
 public class OpenDoor : MonoBehaviour
 {
-    Animator anim;
+    public Button button;
+    public Player player;
+    public DoorState[] doorstate;
+    public ColliderState[] cols;
+    GameObject door;
+    public int currentCollider = 0;
+    public Vector2 vect = Vector2.zero;
     // Start is called before the first frame update
     void Start()
     {
-       anim = GetComponent<Animator>();
+        button = GetComponent<Button>();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void buttonHide()
     {
+        button.gameObject.SetActive(false);
+    }
+    public void buttonShow()
+    {
+        button.gameObject.SetActive(true);
+    }
+    public void OnClick()
+    {
+        vect = cols[0].transform.position;
+        inCollider();
+        doorstate[currentCollider].stateDoor();
         
     }
-    void OnTriggerEnter2D(Collider2D col)
+        
+    
+    public void inCollider()
     {
-        //открытие двери
-        if (col.tag == "Player")
-        {
-            anim.SetBool("isOpen", true);
+        for (int i = 0; i < cols.Length; i++) {
+            if (cols[i].isActiveTrigger == true)
+            {
+                currentCollider = i;
+            }
         }
     }
+    //}
+    //public void OnClick()
+    //{
+    //    doorstate.stateDoor();
+    //}
 }

@@ -74,7 +74,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 83f4ed163f1d6f2479add6d055960244, type: 2}
+  m_Motion: {fileID: 7400000, guid: 72f0c0462cb7c0341af8a803d0ba9ff2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: isOpen
@@ -136,7 +136,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ActiveObjectDoor
+  m_Name: ActiveObjectDoor 1
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isOpen
@@ -144,13 +144,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isClosed
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -185,7 +185,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c8af49131d70f70459757011a7ff0aec, type: 2}
+  m_Motion: {fileID: 7400000, guid: 07d243d201db73e40801dd0e5abc861e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
