@@ -14,11 +14,10 @@ public class ButtonHideTrigger : MonoBehaviour
     OpenDoor open;
     void OnTriggerEnter2D(Collider2D col)
     {
-        
-        button.gameObject.SetActive(true);
+        if (col.tag == "Player") button.gameObject.SetActive(true);
     }
     void OnTriggerExit2D(Collider2D col)
     {
-        button.gameObject.SetActive(false);
+        if (col.tag == "Player")  button.gameObject.SetActive(false);
     }
 }
