@@ -6,10 +6,14 @@ public class Damage : MonoBehaviour
 {
     public Enemy en;
     Bullet ak;
+    BulletDrob drob;
+    BulletKnife knife;
     // Start is called before the first frame update
     void Start()
     {
         ak = new Bullet();
+        drob = new BulletDrob();
+        knife = new BulletKnife();
     }
 
     // Update is called once per frame
@@ -20,9 +24,31 @@ public class Damage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Ak")
+        //if (collision.tag == "Ak")
+        //{
+        //    en.curhlt -= ak.dmg;
+        //}
+        //if (collision.tag == "Drob")
+        //{
+        //    en.curhlt -= drob.dmg;
+        //}
+        //if (collision.tag == "Knife")
+        //{
+        //    en.curhlt -= knife.dmg;
+        //}
+        switch (collision.tag)
         {
-            en.curhlt -= ak.dmg;
+            case "Ak":
+                en.curhlt -= ak.dmg;
+                break;
+            case "Drob":
+                en.curhlt -= drob.dmg;
+                break;
+            case "Knife":
+                en.curhlt -= knife.dmg;
+                break;
+            default: break;
         }
+
     }
 }

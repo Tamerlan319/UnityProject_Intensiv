@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
     public float startTimeBtwAttack;
     public string PointAt;
     public int curhlt;
+    public SpriteRenderer spr;
+    public Transform zombie;
 
 
     public void TakeDamage(int damage)
@@ -76,7 +78,11 @@ public class Enemy : MonoBehaviour
     {
         if (curhlt <= 0)
         {
-            speed = 0;
+            //speed = 0;
+            GameObject g = gameObject;
+            Instantiate(spr, g.transform.position, g.transform.rotation);
+            Destroy(g);
+            
         }
         if (action == 0)
         {

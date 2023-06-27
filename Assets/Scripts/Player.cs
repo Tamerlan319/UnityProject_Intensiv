@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using static Unity.IO.LowLevel.Unsafe.AsyncReadManagerMetrics;
 
 public class Player : MonoBehaviour
 {
@@ -15,7 +18,9 @@ public class Player : MonoBehaviour
     public int curhlt;
     public Animator anim;
     public Gun gun1;
-
+    public GunDrob gun2;
+    public AttackKnife knifeGun;
+    private float timeBtwShots = 1;
 
     public AnimationClip atKnife, atAk, atDrob, idle;
 
@@ -25,6 +30,7 @@ public class Player : MonoBehaviour
     private int sostoyanie = 2;
 
     public Transform player;
+    public int action = 0;
 
 
     public void TakeDamage(int damage)
@@ -49,6 +55,7 @@ public class Player : MonoBehaviour
 
     }
 
+
     // Update is called once per frame
     void Update()
     {
@@ -65,37 +72,68 @@ public class Player : MonoBehaviour
         {
             case 0:
                 spriteRenderer.sprite = knife;
-                //anim.SetBool("AttackKnife", false);
-                //anim.SetBool("AttackAk", false);
-                //anim.SetBool("AttackDrob", false);
-                //anim.SetBool("IdleKnife", true);
+                
+
+                //anim.SetBool("isKnife", true);
+
+                if(knifeGun.timeBtwShots <= 0.2)
+                {
+                    anim.SetBool("isKnife", true);
+                    anim.SetBool("isAk", false);
+                    anim.SetBool("isDrob", false);
+                }
+                else
+                {
+                    anim.SetBool("isKnife", false);
+                    anim.SetBool("isAk", false);
+                    anim.SetBool("isDrob", false);
+                }
 
                 gun1.gameObject.SetActive(false);
+                gun2.gameObject.SetActive(false);
+                knifeGun.gameObject.SetActive(true);
+                action = 0;
                 break;
             case 1:
 
-                //anim.SetBool("AttackKnife", false);
-                //anim.SetBool("AttackAk", true);
-                //anim.SetBool("AttackDrob", false);
-                //anim.SetBool("IdleKnife", false);
+                anim.SetBool("isKnife", false);
+                anim.SetBool("isAk", true);
+                anim.SetBool("isDrob", false);
 
                 gun1.gameObject.SetActive(true);
+                gun2.gameObject.SetActive(false);
+                knifeGun.gameObject.SetActive(false);
                 spriteRenderer.sprite = ak;
+                action = 1;
                 break;
             case 2:
-                anim.SetBool("AttackKnife", false);
-                anim.SetBool("AttackAk", false);
-                anim.SetBool("AttackDrob", true);
-                anim.SetBool("IdleKnife", false);
+                anim.SetBool("isKnife", false);
+                anim.SetBool("isAk", false);
+                anim.SetBool("isDrob", true);
 
                 
                 gun1.gameObject.SetActive(false);
+                gun2.gameObject.SetActive(true);
+                knifeGun.gameObject.SetActive(false);
                 spriteRenderer.sprite = drob;
+                action = 2;
 
                 break;
             default: break;
         }
 
+    }
+    public float time, sec = 1;
+    public void An()
+    {
+        anim.SetBool("isKnife", true);
+        if (time > sec)
+        {
+            Debug.Log("");
+            time = 0;
+        }
+        time += Time.deltaTime;
+        anim.SetBool("isKnife", false);
     }
 
     private void FixedUpdate()

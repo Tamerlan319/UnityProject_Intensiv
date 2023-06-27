@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletDrob : MonoBehaviour
 {
     public float speed;
     public float lifetime;
     public float distance;
-    public int damage = 10;
+    public static int damage = 10;
     public int dmg;
     public LayerMask whatIsSolid;
     // Start is called before the first frame update
     void Start()
     {
-        damage = 10;
+        damage = dmg;
     }
 
-    public Bullet ()
+    public BulletDrob()
     {
         dmg = damage;
     }
@@ -28,7 +29,7 @@ public class Bullet : MonoBehaviour
 
         if (hitInfo.collider != null)
         {
-            double sec = 0.1;
+            double sec = 0.2;
             if (hitInfo.collider.CompareTag("Enemy"))
             {
                 //hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
@@ -38,5 +39,9 @@ public class Bullet : MonoBehaviour
 
         }
         transform.Translate(Vector2.up * speed * Time.deltaTime);
+    }
+    public void Attack()
+    {
+
     }
 }

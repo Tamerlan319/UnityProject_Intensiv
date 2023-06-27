@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
     // Start is called before the first frame update
+    public Player pl;
     void Start()
     {
         
@@ -19,17 +20,24 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Vector3 df = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        //float rotZ = Mathf.Atan2(df.y, df.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
-        if (timeBtwShots <= 0)
+        
+    }
+    public void Attack()
+    {
+        if (pl.action == 1)
         {
-            if (Input.GetMouseButton(0))
+            //Vector3 df = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            //float rotZ = Mathf.Atan2(df.y, df.x) * Mathf.Rad2Deg;
+            //transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+            if (timeBtwShots <= 0)
             {
+                //if (Input.GetMouseButton(0))
+                //{
                 Instantiate(bullet, shotPoint.position, transform.rotation);
-                timeBtwShots = startTimeBtwShots;
+                //timeBtwShots = startTimeBtwShots;
+                //}
             }
+            //else timeBtwShots -= Time.deltaTime;
         }
-        else timeBtwShots -= Time.deltaTime;
     }
 }
