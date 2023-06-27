@@ -18,6 +18,7 @@ public class MoveWindows : MonoBehaviour
         canvas[i].gameObject.SetActive(true);
         canvasMain.gameObject.SetActive(false);
         i++;
+        if (i == 2) i = 0;
     }
     public void HideDialogCanvas()
     {
