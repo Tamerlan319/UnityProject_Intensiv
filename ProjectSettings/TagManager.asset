@@ -8,6 +8,7 @@ TagManager:
   - Point1
   - Enemy
   - Ak
+  - PlayerSkin
   layers:
   - Default
   - TransparentFX
