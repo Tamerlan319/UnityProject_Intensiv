@@ -5,9 +5,11 @@ public class DoorState : MonoBehaviour
     bool doorOpen = false;
     public Animator anim;
     bool isOpen, isClosed = false;
-    public bool isActiveTrig;
+    public bool isLocked = true;
+    //public bool isActiveTrig;
     float sec = 1f;
     float time = 0;
+    public Canvas canvas, playerCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,34 +22,41 @@ public class DoorState : MonoBehaviour
     }
     public void stateDoor()
     {
-
-        if (!doorOpen)
+        if (!isLocked)
         {
-            doorOpen = true; isOpen = true; isClosed = false;
-            anim.SetBool("isOpen", true);
-            if (time > sec & isOpen)
+            if (!doorOpen)
             {
-                Debug.Log("Дверь открывается");
-                time = 0;
+                doorOpen = true; isOpen = true; isClosed = false;
+                anim.SetBool("isOpen", true);
+                if (time > sec & isOpen)
+                {
+                    Debug.Log("Дверь открывается");
+                    time = 0;
+                }
+                time += Time.deltaTime;
+                anim.SetBool("isClosed", false);
+                anim.SetBool("isOpened", true);
             }
-            time += Time.deltaTime;
-            anim.SetBool("isClosed", false);
-            anim.SetBool("isOpened", true);
+            else
+            {
+                doorOpen = false; isOpen = false; isClosed = true;
+                anim.SetBool("isClosed", true);
+
+                if (time > sec & isClosed)
+                {
+                    Debug.Log("Дверь закрывается");
+                    time = 0;
+                }
+                time += Time.deltaTime;
+                anim.SetBool("isOpen", false);
+                anim.SetBool("isOpened", false);
+                doorOpen = false;
+            }
         }
         else
         {
-            doorOpen = false; isOpen = false; isClosed = true;
-            anim.SetBool("isClosed", true);
-            
-            if (time > sec & isClosed)
-            {
-                Debug.Log("Дверь закрывается");
-                time = 0;
-            }
-            time += Time.deltaTime;
-            anim.SetBool("isOpen", false);
-            anim.SetBool("isOpened", false);
-            doorOpen = false;
+            canvas.gameObject.SetActive(true);
+            playerCanvas.gameObject.SetActive(false);
         }
     }
 }

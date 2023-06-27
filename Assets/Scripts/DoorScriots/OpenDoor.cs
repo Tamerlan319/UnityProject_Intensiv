@@ -31,13 +31,12 @@ public class OpenDoor : MonoBehaviour
     public void OnClick()
     {
         vect = cols[0].transform.position;
-        inCollider();
-        doorstate[currentCollider].stateDoor();
+        doorstate[inCollider(cols)].stateDoor();
         
     }
         
     
-    public void inCollider()
+    public int inCollider(ColliderState[] cols)
     {
         for (int i = 0; i < cols.Length; i++) {
             if (cols[i].isActiveTrigger == true)
@@ -45,6 +44,7 @@ public class OpenDoor : MonoBehaviour
                 currentCollider = i;
             }
         }
+        return currentCollider;
     }
     //}
     //public void OnClick()
