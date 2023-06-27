@@ -30,7 +30,7 @@ public class Enemy1 : MonoBehaviour
         curhlt -= damage;
         if (curhlt < 0)
         {
-            Destroy(gameObject);
+            speed = 0f;
         }
         health = curhlt;
     }

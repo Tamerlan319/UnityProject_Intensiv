@@ -24,13 +24,14 @@ public class Enemy : MonoBehaviour
     public string PointAt;
     public int curhlt;
 
+
     public void TakeDamage(int damage)
     {
         curhlt -= damage;
         if (curhlt < 0)
         {
             //speed = 0;
-            Destroy(gameObject);
+            speed = 0f;
         }
         health = curhlt;
     }
@@ -73,6 +74,10 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
+        if (curhlt <= 0)
+        {
+            speed = 0;
+        }
         if (action == 0)
         {
             anim.SetBool("Move", true);
