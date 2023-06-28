@@ -7,8 +7,8 @@ public class Bullet : MonoBehaviour
     public float speed;
     public float lifetime;
     public float distance;
-    public int damage = 10;
-    public int dmg;
+    public int damage = 0;
+    public int dmg = 10;
     public LayerMask whatIsSolid;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
 
     public Bullet ()
     {
-        dmg = damage;
+        dmg = 10;
     }
     // Update is called once per frame
     void Update()

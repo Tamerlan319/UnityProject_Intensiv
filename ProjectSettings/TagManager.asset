@@ -9,6 +9,9 @@ TagManager:
   - Drob
   - Knife
   - Enemy
+  - Point
+  - PlayerSkin
+  - Stena
   layers:
   - Default
   - TransparentFX

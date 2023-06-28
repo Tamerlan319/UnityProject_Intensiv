@@ -1175,7 +1175,7 @@ MonoBehaviour:
   timeBtwAttack: 0
   startTimeBtwAttack: 1
   PointAt: Point
-  curhlt: 100
+  curhlt: 200
   spr: {fileID: 2672239137927372528, guid: e745aae0a97a02540b0d64127dc90b70, type: 3}
   zombie: {fileID: 2076240731}
 --- !u!50 &472810210
@@ -1944,7 +1944,7 @@ MonoBehaviour:
   timeBtwAttack: 0
   startTimeBtwAttack: 1
   PointAt: Point
-  curhlt: 100
+  curhlt: 200
   spr: {fileID: 1276561141}
   zombie: {fileID: 1643194915}
 --- !u!1 &730692271
@@ -3586,7 +3586,7 @@ MonoBehaviour:
   speed: 50
   lifetime: 0.5
   distance: 0.5
-  damage: 40
+  damage: 10
   dmg: 10
   whatIsSolid:
     serializedVersion: 2
@@ -3728,7 +3728,7 @@ GameObject:
   - component: {fileID: 1930176899}
   m_Layer: 0
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Stena
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6534,7 +6534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460488087141848832, guid: bd5b4fea9f66d034a914bd1897cdc12f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.229
+      value: -11.272
       objectReference: {fileID: 0}
     - target: {fileID: 6460488087141848832, guid: bd5b4fea9f66d034a914bd1897cdc12f, type: 3}
       propertyPath: m_LocalPosition.y
