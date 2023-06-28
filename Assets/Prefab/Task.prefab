@@ -834,7 +834,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321697741370260463}
+      - m_Target: {fileID: 302937962189638868}
         m_TargetAssemblyTypeName: Exit, Assembly-CSharp
         m_MethodName: Exist
         m_Mode: 1
@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 6575373816741067087}
   - component: {fileID: 655232718996669161}
   - component: {fileID: 8885290774024905300}
-  - component: {fileID: 1321697741370260463}
+  - component: {fileID: 302937962189638868}
   m_Layer: 0
   m_Name: Question
   m_TagString: Untagged
@@ -964,7 +964,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6964424659693609263}
   m_CullTransparentMesh: 1
---- !u!114 &1321697741370260463
+--- !u!114 &302937962189638868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -973,7 +973,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6964424659693609263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03839e06979c6f34cbd0a8f88564a535, type: 3}
+  m_Script: {fileID: 11500000, guid: 54da0bfc3fd079b4aa7657c89f5bb8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas1: {fileID: 5083059030750987581}

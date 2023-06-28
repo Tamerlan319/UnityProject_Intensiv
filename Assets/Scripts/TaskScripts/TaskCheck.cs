@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +10,7 @@ public class TaskCheck : MonoBehaviour
     public Canvas canvas;
     public Canvas PlayerCanvas;
     public OpenDoor openDoor;
+    public MoveWindows moveWindows;
     int i = 0;
     void Start()
     {
@@ -22,6 +21,7 @@ public class TaskCheck : MonoBehaviour
         if (input.text == answer)
         {
             doorstate[openDoor.inCollider(cols)].isLocked = false;
+            moveWindows.i += 1;
             canvas.gameObject.SetActive(false);
             PlayerCanvas.gameObject.SetActive(true);
         }

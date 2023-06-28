@@ -6,7 +6,7 @@ public class MoveWindows : MonoBehaviour
 {
     public Canvas canvasPlay, canvasMain;
     public Canvas[] canvas; //задачи
-    int i;
+    public int i;
     void Start()
     {
         //canvasMain = GetComponent<Canvas>();
@@ -17,8 +17,6 @@ public class MoveWindows : MonoBehaviour
     {
         canvas[i].gameObject.SetActive(true);
         canvasMain.gameObject.SetActive(false);
-        i++;
-        if (i == 2) i = 0;
     }
     public void HideDialogCanvas()
     {
