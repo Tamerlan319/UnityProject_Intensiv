@@ -22,8 +22,6 @@ public class Player : MonoBehaviour
     public AttackKnife knifeGun;
     private float timeBtwShots = 1;
 
-    public AnimationClip atKnife, atAk, atDrob, idle;
-
     public Sprite ak, drob, knife;
     public SpriteRenderer spriteRenderer;
 

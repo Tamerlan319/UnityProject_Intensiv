@@ -4,25 +4,25 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.TextCore.Text;
 
-public class Enemy : MonoBehaviour
+public class Enemy1 : MonoBehaviour
 {
     public GameObject[] point = new GameObject[14];
     private static int action, rand = 0;
     public float speed = 1f;
     private Vector3 eulerAngles;
     private object quaternion;
-    public float angryDist = 20;
+    public float angryDist = 7;
     private Transform player;
     public Animator anim;
     public static int health = 100;
     public int damage = 40;
     public Transform attackPoint;
-    public float attackRange = 0.5f;
+    public float attackRange = 1.5f;
     public LayerMask enemyLayers;
     public float timeBtwAttack;
-    public float startTimeBtwAttack;
+    public float startTimeBtwAttack = 1;
     public string PointAt;
-    public int curhlt;
+    public int curhlt = 100;
     public SpriteRenderer spr;
     public Transform zombie;
 
@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
     public void Attack()
     {
         {
-            
+
         }
         if (timeBtwAttack <= 0)
         {
@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
 
             //foreach (Collider2D player in hitPlayers)
             //{
-                player.GetComponent<Player>().TakeDamage(damage);
+            player.GetComponent<Player>().TakeDamage(damage);
             //}
             speed = 0;
             timeBtwAttack = startTimeBtwAttack;
@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
     }
     private void OnDrawGizmosSelected()
     {
-        if(attackPoint == null)
+        if (attackPoint == null)
         {
             return;
         }
@@ -70,9 +70,9 @@ public class Enemy : MonoBehaviour
     {
         curhlt = health;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        attackPoint = GameObject.FindGameObjectWithTag(PointAt).transform;
+        //attackPoint = GameObject.FindGameObjectWithTag(PointAt).transform;
         anim = GetComponent<Animator>();
-        
+
     }
     void Update()
     {
@@ -82,7 +82,7 @@ public class Enemy : MonoBehaviour
             GameObject g = gameObject;
             Instantiate(spr, g.transform.position, g.transform.rotation);
             Destroy(g);
-            
+
         }
         if (action == 0)
         {
@@ -147,7 +147,7 @@ public class Enemy : MonoBehaviour
             transform.eulerAngles = eulerAngles;
             anim.SetBool("Move", false);
             anim.SetBool("Attack", true);
-            
+
 
             Attack();
 
@@ -158,7 +158,7 @@ public class Enemy : MonoBehaviour
         }
         if (health == 0)
         {
-            
+
         }
     }
 
