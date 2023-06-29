@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     public Transform shotPoint;
     private float timeBtwShots;
     public float startTimeBtwShots;
+    public AudioSource aud;
     // Start is called before the first frame update
     public Player pl;
     void Start()
@@ -33,6 +34,7 @@ public class Gun : MonoBehaviour
             {
                 //if (Input.GetMouseButton(0))
                 //{
+                aud.Play();
                 Instantiate(bullet, shotPoint.position, transform.rotation);
                 //timeBtwShots = startTimeBtwShots;
                 //}

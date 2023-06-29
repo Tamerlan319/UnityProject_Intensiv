@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -21,9 +22,14 @@ public class Player : MonoBehaviour
     public GunDrob gun2;
     public AttackKnife knifeGun;
     private float timeBtwShots = 1;
-
+    public AudioSource aud;
+    public AudioClip[] clips;
+    AudioSource steps;
+    bool isMove = false;
     public Sprite ak, drob, knife;
     public SpriteRenderer spriteRenderer;
+    public float timeBtwSteps;
+    float startTimeBtwSteps;
 
     private int sostoyanie = 2;
 
@@ -48,6 +54,7 @@ public class Player : MonoBehaviour
         health = curhlt;
         rb = GetComponent<Rigidbody2D>();
         anim = player.GetComponent<Animator>();
+        steps = GetComponent<AudioSource>();
         
         //spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -57,13 +64,22 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeBtwSteps -= Time.deltaTime;
         //anim.SetBool("Attack", false);
         //anim.SetBool("idleKnife", true);
         Vector3 moveVector = (Vector3.up * joystick.Horizontal + Vector3.left * joystick.Vertical);
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
             transform.rotation = Quaternion.LookRotation(Vector3.forward, moveVector);
+            isMove = true;
         }
+        else { isMove = false; }
+        if (!isMove & timeBtwSteps <= 0)
+        {
+            steps.Play();
+            timeBtwSteps = startTimeBtwSteps;
+        }
+        //else steps.Stop();
         moveInput = new Vector2(joystick.Horizontal, joystick.Vertical);
         moveVelocity = moveInput.normalized * speed;
         switch (sostoyanie)
@@ -76,6 +92,7 @@ public class Player : MonoBehaviour
 
                 if(knifeGun.timeBtwShots <= 0.2)
                 {
+                    aud.clip = clips[0];
                     anim.SetBool("isKnife", true);
                     anim.SetBool("isAk", false);
                     anim.SetBool("isDrob", false);
@@ -93,7 +110,7 @@ public class Player : MonoBehaviour
                 action = 0;
                 break;
             case 1:
-
+                aud.clip = clips[1];
                 anim.SetBool("isKnife", false);
                 anim.SetBool("isAk", true);
                 anim.SetBool("isDrob", false);
@@ -105,6 +122,7 @@ public class Player : MonoBehaviour
                 action = 1;
                 break;
             case 2:
+                aud.clip = clips[2];
                 anim.SetBool("isKnife", false);
                 anim.SetBool("isAk", false);
                 anim.SetBool("isDrob", true);
@@ -137,6 +155,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+        
     }
     public void Gun1()
     {

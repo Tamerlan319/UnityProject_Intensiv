@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DoorState : MonoBehaviour
 {
+    public AudioClip audio;
+    public AudioSource player;
     bool doorOpen = false;
     public Animator anim;
     bool isOpen, isClosed = false;
@@ -28,6 +30,8 @@ public class DoorState : MonoBehaviour
             {
                 doorOpen = true; isOpen = true; isClosed = false;
                 anim.SetBool("isOpen", true);
+                player.clip = audio;
+                player.Play();
                 if (time > sec & isOpen)
                 {
                     Debug.Log("Дверь открывается");
@@ -41,7 +45,8 @@ public class DoorState : MonoBehaviour
             {
                 doorOpen = false; isOpen = false; isClosed = true;
                 anim.SetBool("isClosed", true);
-
+                player.clip = audio;
+                player.Play();
                 if (time > sec & isClosed)
                 {
                     Debug.Log("Дверь закрывается");

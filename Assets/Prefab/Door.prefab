@@ -31,7 +31,7 @@ Transform:
   - {fileID: 2311408244416518395}
   - {fileID: 1675305881380328195}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4542351188515424316
 GameObject:
@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 5939305215408572256}
   - component: {fileID: 7701614768085704405}
   - component: {fileID: 9050281286772356658}
+  - component: {fileID: 5703349893118090031}
   m_Layer: 0
   m_Name: ActiveObjectDoor
   m_TagString: Untagged
@@ -321,4 +322,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f155fcb845929b04ab59937f77566916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 0}
   anim: {fileID: 5939305215408572256}
+  isLocked: 1
+  canvas: {fileID: 0}
+  playerCanvas: {fileID: 0}
+--- !u!114 &5703349893118090031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9073303462439402995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72cb1aaf4683a5e44a735d799c5be3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

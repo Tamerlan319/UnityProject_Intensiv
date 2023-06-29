@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    public bool[] tutorialTasks = new bool[4];
+    bool isLocked = true;
+    public DoorState[] doors;
     void Start()
     {
         
@@ -19,10 +20,26 @@ public class NextLevel : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        CheckDone();
         //переход игрока на следующий уровень
-        if (col.tag == "Player")
+        if (col.tag == "Player" & !isLocked)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+    void CheckDone()
+    {
+        foreach (var i in doors)
+        {
+            if (i.isLocked == false)
+            {
+                isLocked = false;
+            }
+            else
+            {
+                isLocked = true;
+                break;
+            }
         }
     }
 }

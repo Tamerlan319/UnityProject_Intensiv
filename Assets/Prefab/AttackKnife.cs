@@ -13,6 +13,7 @@ public class AttackKnife : MonoBehaviour
     public bool flag = false;
     public Animator anim;
     public Player pl;
+    public AudioSource aud;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +34,11 @@ public class AttackKnife : MonoBehaviour
             {
                 //if (Input.GetMouseButton(0))
                 //{
-                
+                aud.Play();
                 //anim.SetBool("isKnife", true);
                 if (flag)
                 {
+                    
                     Instantiate(bullet, shotPoint.position, transform.rotation);
                     
                 }
