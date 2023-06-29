@@ -12,6 +12,7 @@ TagManager:
   - Point
   - PlayerSkin
   - Stena
+  - DeadZombie
   layers:
   - Default
   - TransparentFX
