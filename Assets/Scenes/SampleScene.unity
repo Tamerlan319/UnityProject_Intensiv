@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &113863112
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -234,6 +234,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   joystick: {fileID: 0}
+  curhlt: 0
+  anim: {fileID: 0}
+  gun1: {fileID: 0}
+  gun2: {fileID: 0}
+  knifeGun: {fileID: 0}
+  aud: {fileID: 0}
+  clips: []
+  ak: {fileID: 0}
+  drob: {fileID: 0}
+  knife: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  timeBtwSteps: 0
+  player: {fileID: 0}
+  action: 0
+  time: 0
+  sec: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.35625002, y: 0.13674575}
   m_AnchorMax: {x: 0.64125, y: 0.23374575}
-  m_AnchoredPosition: {x: -0.058517456, y: 0}
+  m_AnchoredPosition: {x: -0.058532715, y: 0}
   m_SizeDelta: {x: 0, y: 0.0000076294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171032796
@@ -896,7 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35d22c0fed7c9149b0420c32a1b253a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialTasks: 00000000
+  doors: []
 --- !u!114 &1417070461
 MonoBehaviour:
   m_ObjectHideFlags: 0
