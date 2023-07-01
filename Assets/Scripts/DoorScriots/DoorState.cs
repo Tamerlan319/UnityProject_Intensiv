@@ -43,7 +43,7 @@ public class DoorState : MonoBehaviour
             }
             else
             {
-                doorOpen = false; isOpen = false; isClosed = true;
+                isOpen = false; isClosed = true;
                 anim.SetBool("isClosed", true);
                 player.clip = audio;
                 player.Play();
@@ -58,7 +58,7 @@ public class DoorState : MonoBehaviour
                 doorOpen = false;
             }
         }
-        else
+        else if (isLocked)
         {
             canvas.gameObject.SetActive(true);
             playerCanvas.gameObject.SetActive(false);

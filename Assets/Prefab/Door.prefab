@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5895388535610787671}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 0}
+  player: {fileID: 0}
   anim: {fileID: 5939305215408572256}
   isLocked: 1
   canvas: {fileID: 0}

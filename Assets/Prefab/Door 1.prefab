@@ -31,7 +31,7 @@ Transform:
   - {fileID: 7973056707775967467}
   - {fileID: 4853433030629792148}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &6058039696491561276
 GameObject:
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 7854443416209724876}
   m_Layer: 0
   m_Name: ActiveObjectDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,5 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f155fcb845929b04ab59937f77566916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 0}
+  player: {fileID: 0}
   anim: {fileID: 6935346836883426188}
-  isActiveTrig: 0
+  isLocked: 1
+  canvas: {fileID: 0}
+  playerCanvas: {fileID: 0}

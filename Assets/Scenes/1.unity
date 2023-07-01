@@ -350,6 +350,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2491788281092174808, guid: be516c266a529ab4f9ee1b0f66e86063, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3789491133493351919, guid: be516c266a529ab4f9ee1b0f66e86063, type: 3}
       propertyPath: button
       value: 
@@ -461,6 +465,10 @@ PrefabInstance:
     - target: {fileID: 9073303462439402995, guid: be516c266a529ab4f9ee1b0f66e86063, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073303462439402995, guid: be516c266a529ab4f9ee1b0f66e86063, type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6684,6 +6692,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 22574764308587641, guid: 0de572d774b1dd747a45a9b9cdac3617, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -153
+      objectReference: {fileID: 0}
+    - target: {fileID: 22574764308587641, guid: 0de572d774b1dd747a45a9b9cdac3617, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 394
+      objectReference: {fileID: 0}
     - target: {fileID: 1694578256659088713, guid: 0de572d774b1dd747a45a9b9cdac3617, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6778,11 +6794,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7134507546297438260, guid: 0de572d774b1dd747a45a9b9cdac3617, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -156.90002
+      value: -149.11
       objectReference: {fileID: 0}
     - target: {fileID: 7134507546297438260, guid: 0de572d774b1dd747a45a9b9cdac3617, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.4058
+      value: 87
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463782840090593623, guid: 0de572d774b1dd747a45a9b9cdac3617, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -151.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463782840090593623, guid: 0de572d774b1dd747a45a9b9cdac3617, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 7666450646556844282, guid: 0de572d774b1dd747a45a9b9cdac3617, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7549,6 +7573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 225369475339213234, guid: 6b4dede2c59a0a746b99ff60ec47449a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3228846468465478723, guid: 6b4dede2c59a0a746b99ff60ec47449a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -7633,6 +7661,10 @@ PrefabInstance:
       propertyPath: playerCanvas
       value: 
       objectReference: {fileID: 1659101430}
+    - target: {fileID: 8259038787942973876, guid: 6b4dede2c59a0a746b99ff60ec47449a, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
