@@ -191,7 +191,7 @@ Transform:
   m_Children:
   - {fileID: 5268780030347901985}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1663664165584891874
 MonoBehaviour:
@@ -207,7 +207,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasPlay: {fileID: 0}
   canvasMain: {fileID: 1509087325594648780}
-  canvas: {fileID: 0}
+  canvas:
+  - {fileID: 0}
+  i: 0
 --- !u!1 &4640037193931349618
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5268780030347901985
 RectTransform:
   m_ObjectHideFlags: 0
