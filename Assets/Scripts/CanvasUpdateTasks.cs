@@ -15,7 +15,6 @@ public class CanvasUpdateTasks : MonoBehaviour
     {
         doors = GameObject.FindGameObjectsWithTag("Door");
         text = GetComponent<Text>();
-        
         door = new DoorState[doors.Length];
         int i = 0;
         foreach (GameObject door1 in doors)
