@@ -14,6 +14,7 @@ public class CameraFollow : MonoBehaviour
     {
         offset = new Vector2(Mathf.Abs(offset.x), offset.y);
         FindPlayer(faceLeft);
+        AudioListener.volume = PlayerPrefs.GetFloat("SavedSound");
     }
 
     public void FindPlayer(bool playerFaceLeft)

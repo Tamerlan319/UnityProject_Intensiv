@@ -16,6 +16,8 @@ TagManager:
   - Door
   - TaskCounter
   - MessageButton
+  - Scroller
+  - MenuButtons
   layers:
   - Default
   - TransparentFX
