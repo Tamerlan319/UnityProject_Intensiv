@@ -20,4 +20,16 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void LoadGame()
+    {
+        int Lvl = PlayerPrefs.GetInt("Level");
+        if (Lvl > 0)
+        {
+            SceneManager.LoadScene(Lvl);
+        }
+        else
+        {
+            Debug.Log("Начните новую игру");
+        }
+    }
 }
