@@ -235,8 +235,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 6.98}
+  m_SizeDelta: {x: 580, y: 306.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &212850592
 GameObject:
@@ -575,6 +575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785355703}
   - component: {fileID: 785355702}
+  - component: {fileID: 785355704}
   m_Layer: 0
   m_Name: 1651833951_4-gamerwall-pro-p-vizhivanie-v-lesu-zombi-apokalipsis-krasiv-4
   m_TagString: Untagged
@@ -634,21 +635,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &785355703
-Transform:
+--- !u!224 &785355703
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785355701}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13934177, y: -0.45, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 323.99994}
+  m_LocalScale: {x: 46.753197, y: 45.33887, z: 36}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 956090275}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 22.47998, y: -21.820068}
+  m_SizeDelta: {x: -1260.8, y: -579.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &785355704
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785355701}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &956090271
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +773,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 785355703}
   - {fileID: 2102421576}
   - {fileID: 182483001}
   - {fileID: 1142662787}
@@ -874,7 +904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 43}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142662788
@@ -928,10 +958,10 @@ RectTransform:
   m_Father: {fileID: 182483001}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.35625002, y: 0.13674575}
-  m_AnchorMax: {x: 0.64125, y: 0.23374575}
-  m_AnchoredPosition: {x: -0.9335327, y: -110.16398}
-  m_SizeDelta: {x: 0, y: 33.95002}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.15319824, y: -149.00002}
+  m_SizeDelta: {x: 0, y: -255.04999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171032796
 MonoBehaviour:
@@ -1079,10 +1109,10 @@ RectTransform:
   m_Father: {fileID: 182483001}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.35625002, y: 0.45400003}
-  m_AnchorMax: {x: 0.64125, y: 0.55541813}
-  m_AnchoredPosition: {x: 0.34680176, y: 1.0081806}
-  m_SizeDelta: {x: 0, y: 36.77632}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.15319824, y: 2.5081787}
+  m_SizeDelta: {x: 0, y: -250.22368}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417070456
 MonoBehaviour:
@@ -1752,6 +1782,7 @@ GameObject:
   - component: {fileID: 2102421579}
   - component: {fileID: 2102421578}
   - component: {fileID: 2102421577}
+  - component: {fileID: 2102421580}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -1774,10 +1805,10 @@ RectTransform:
   m_Father: {fileID: 956090275}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1675, y: 0.66200006}
-  m_AnchorMax: {x: 0.82500005, y: 0.8555085}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 130.68}
+  m_SizeDelta: {x: 0, y: -261.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102421577
 MonoBehaviour:
@@ -1836,6 +1867,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102421575}
   m_CullTransparentMesh: 1
+--- !u!223 &2102421580
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102421575}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &2143943101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,10 +1926,10 @@ RectTransform:
   m_Father: {fileID: 182483001}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.35625002, y: 0.294}
-  m_AnchorMax: {x: 0.64125, y: 0.39600003}
-  m_AnchoredPosition: {x: 0.34680176, y: -54.252502}
-  m_SizeDelta: {x: 0, y: 35.695007}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.15319824, y: -76}
+  m_SizeDelta: {x: 0, y: -251.305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143943103
 MonoBehaviour:

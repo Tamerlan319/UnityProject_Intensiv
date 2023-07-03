@@ -206,6 +206,14 @@ PrefabInstance:
       propertyPath: task
       value: 
       objectReference: {fileID: 2800000, guid: c1c27324ae9bd0547942183dcc00d078, type: 3}
+    - target: {fileID: 6074555146035797513, guid: 72abd779014d0c34184627b669f0675e, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 2800000, guid: 79b779889025eff45b398da8fd7f057c, type: 3}
+    - target: {fileID: 6074555146035797513, guid: 72abd779014d0c34184627b669f0675e, type: 3}
+      propertyPath: task
+      value: 
+      objectReference: {fileID: 2800000, guid: c1c27324ae9bd0547942183dcc00d078, type: 3}
     - target: {fileID: 6723327211367373129, guid: 72abd779014d0c34184627b669f0675e, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -337,6 +345,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: dba4cb93db84bed48a153e8029a3b72d, type: 3}
     - target: {fileID: 3665399358837092423, guid: 72abd779014d0c34184627b669f0675e, type: 3}
+      propertyPath: task
+      value: 
+      objectReference: {fileID: 2800000, guid: 315364ffc1b2c91499051ee21a6901bd, type: 3}
+    - target: {fileID: 6074555146035797513, guid: 72abd779014d0c34184627b669f0675e, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 2800000, guid: dba4cb93db84bed48a153e8029a3b72d, type: 3}
+    - target: {fileID: 6074555146035797513, guid: 72abd779014d0c34184627b669f0675e, type: 3}
       propertyPath: task
       value: 
       objectReference: {fileID: 2800000, guid: 315364ffc1b2c91499051ee21a6901bd, type: 3}
@@ -648,6 +664,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: 1b7cd8aecd23e7c418eb4b4259c4cbb1, type: 3}
     - target: {fileID: 3665399358837092423, guid: 72abd779014d0c34184627b669f0675e, type: 3}
+      propertyPath: task
+      value: 
+      objectReference: {fileID: 2800000, guid: 680da74bb2fb2e3489f53f50b149a6b4, type: 3}
+    - target: {fileID: 6074555146035797513, guid: 72abd779014d0c34184627b669f0675e, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 2800000, guid: 1b7cd8aecd23e7c418eb4b4259c4cbb1, type: 3}
+    - target: {fileID: 6074555146035797513, guid: 72abd779014d0c34184627b669f0675e, type: 3}
       propertyPath: task
       value: 
       objectReference: {fileID: 2800000, guid: 680da74bb2fb2e3489f53f50b149a6b4, type: 3}
@@ -6379,6 +6403,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 5939305215408572256, guid: be516c266a529ab4f9ee1b0f66e86063, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bd98c75dfe1e2c148b026d438f0dcbef, type: 2}
     - target: {fileID: 6215837438823036569, guid: be516c266a529ab4f9ee1b0f66e86063, type: 3}
       propertyPath: m_SortingOrder
       value: 2

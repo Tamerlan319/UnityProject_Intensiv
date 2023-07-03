@@ -532,7 +532,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3665399358837092423}
+      - m_Target: {fileID: 6074555146035797513}
         m_TargetAssemblyTypeName: Hint, Assembly-CSharp
         m_MethodName: ShowHint
         m_Mode: 1
@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 9069783272280301084}
   - component: {fileID: 5784667521584186416}
   - component: {fileID: 2567523675205800921}
-  - component: {fileID: 3665399358837092423}
+  - component: {fileID: 6074555146035797513}
   m_Layer: 0
   m_Name: RawImage
   m_TagString: Untagged
@@ -691,14 +691,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: dbca0cd5f6a18c64aa409dd4620b77e8, type: 3}
+  m_Texture: {fileID: 2800000, guid: 2a0d2b082fccd0d488fb966efbbfd170, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
---- !u!114 &3665399358837092423
+--- !u!114 &6074555146035797513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -710,8 +710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edaf098655eefca4ea0b56cd1ce6fe00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hint: {fileID: 0}
-  task: {fileID: 0}
+  hint: {fileID: 2800000, guid: 1d6fed921a77b2c45813514debd5c95c, type: 3}
+  task: {fileID: 2800000, guid: 2a0d2b082fccd0d488fb966efbbfd170, type: 3}
 --- !u!1 &6829256360773938198
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,10 +747,10 @@ RectTransform:
   m_Father: {fileID: 2567133666863610994}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.9238751, y: 0.7668519}
-  m_AnchorMax: {x: 0.98841894, y: 0.95514816}
-  m_AnchoredPosition: {x: -2, y: -1.8792114}
-  m_SizeDelta: {x: 8.2542, y: 12.718399}
+  m_AnchorMin: {x: 0.9225642, y: 0.77544445}
+  m_AnchorMax: {x: 0.98841894, y: 0.95800006}
+  m_AnchoredPosition: {x: 1.5, y: 1.6052246}
+  m_SizeDelta: {x: 9.2542, y: -0.25050354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3332066367476848696
 CanvasRenderer:
@@ -866,7 +866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2567133666863610994
 RectTransform:
   m_ObjectHideFlags: 0
@@ -928,12 +928,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 2050}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.308
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1133,15 +1133,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7382427368937885194}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa37ba76654b3624bbd7be0c0ef88412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 9121004403221472267}
   answer: "\u043D\u043E\u0441"
-  doorstate: []
-  cols: []
+  doorstate:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cols:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   canvas: {fileID: 5083059030750987581}
   PlayerCanvas: {fileID: 0}
   openDoor: {fileID: 0}
@@ -1330,5 +1336,5 @@ Transform:
   m_Children:
   - {fileID: 2567133666863610994}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
